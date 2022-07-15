@@ -17,8 +17,8 @@ import { CoursesService } from './courses.service';
 export class CoursesComponent implements OnInit {
   title = "List of Courses";
   courses;
-  constructor() { 
-    let service = new CoursesService();
+  constructor(service: CoursesService) { //good implementation
+    // let service = new CoursesService(); bad implementation
     this.courses = service.getCourses();
   }
 
